@@ -21,8 +21,8 @@ struct CustomTabBar: View {
                 .frame(maxWidth: .infinity)
                 
                 
-                TabBarButton(icon: "ticket", label: "Bookings", isSelected: selectedTab == .bookings) {
-                    selectedTab = .bookings
+                TabBarButton(icon: "ticket", label: "Tickets", isSelected: selectedTab == .tickets) {
+                    selectedTab = .tickets
                 }
                 .padding(.top, 20)
                 .frame(maxWidth: .infinity)
@@ -60,7 +60,7 @@ struct TabBarButton: View{
 
 enum Tab {
     case movies
-    case bookings
+    case tickets
 }
 
 

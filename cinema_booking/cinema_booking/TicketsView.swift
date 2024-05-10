@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct BookingsView: View {
+struct TicketsView: View {
     // Demo wireframe
     let movies = [
         Movies(name: "Movie 1", poster: "poster1"),
@@ -20,7 +20,7 @@ struct BookingsView: View {
     
     var body: some View {
         VStack (spacing:0){
-            BookingNavBarView
+            TicketsNavBarView
             
             ScrollView {
                 VStack {
@@ -45,7 +45,7 @@ struct BookingsView: View {
                 }
             }
             .padding(.top, 20)
-            .navigationTitle("Movies")
+            .navigationBarHidden(true)
         }
         .edgesIgnoringSafeArea(.top)
     }
@@ -59,18 +59,18 @@ struct Movies {
     let poster: String  // Assume you have images named "poster1", "poster2", etc., in your assets
 }
 
-struct BookingsView_Previews: PreviewProvider {
+struct TicketsView_Previews: PreviewProvider {
     static var previews: some View {
-        BookingsView()
+        TicketsView()
     }
 }
 
-var BookingNavBarView: some View {
+var TicketsNavBarView: some View {
     VStack {
         HStack{
             //backButton
             Spacer()
-            Text("Booking")
+            Text("Tickets")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)

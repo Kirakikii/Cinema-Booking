@@ -152,14 +152,15 @@ struct SeatSelectionView: View {
                     Text("Location: Cinema 1")
                     Text("Seat: \(selectedSeats.joined(separator: ", "))")
                     Text("Total Price: $\(selectedSeats.count * seatPrice)")
-                    Button("Check out") {
-                        // Add checkout action here
+                    NavigationLink(destination: BookingConfirmView()){
+                        Text("Check out")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.indigo)
+                            .cornerRadius(10)
+                            .padding(.top, 25)
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.indigo)
-                    .cornerRadius(10)
-                    .padding(.top, 25)
+                    
                 }
                 .padding(50)
                 .background(Color.white)

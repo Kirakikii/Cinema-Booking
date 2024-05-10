@@ -16,7 +16,7 @@
 		DB5D58D62BEAA6D3000E7E36 /* SeatSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58D52BEAA6D3000E7E36 /* SeatSelectionView.swift */; };
 		DB5D58D82BEBA4CA000E7E36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58D72BEBA4CA000E7E36 /* ContentView.swift */; };
 		DB5D58DA2BEBAC7E000E7E36 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */; };
-		DB5D58DC2BEBACDE000E7E36 /* BookingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58DB2BEBACDE000E7E36 /* BookingsView.swift */; };
+		DB5D58DC2BEBACDE000E7E36 /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */; };
 		DB5D58DE2BEBBAF6000E7E36 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */; };
 		DB89C1282BECB08B004E0E01 /* CinemaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,7 @@
 		DB5D58D52BEAA6D3000E7E36 /* SeatSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectionView.swift; sourceTree = "<group>"; };
 		DB5D58D72BEBA4CA000E7E36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		DB5D58DB2BEBACDE000E7E36 /* BookingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsView.swift; sourceTree = "<group>"; };
+		DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
 		DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 		DB5D58C42BEAA67E000E7E36 /* cinema_booking */ = {
 			isa = PBXGroup;
 			children = (
-				DB5D58DB2BEBACDE000E7E36 /* BookingsView.swift */,
+				DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */,
 				DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */,
 				DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */,
 				DB5D58D52BEAA6D3000E7E36 /* SeatSelectionView.swift */,
@@ -186,7 +186,7 @@
 				DB5D58CA2BEAA67E000E7E36 /* Item_temp.swift in Sources */,
 				DB89C1282BECB08B004E0E01 /* CinemaPicker.swift in Sources */,
 				DB5D58C62BEAA67E000E7E36 /* cinema_bookingApp.swift in Sources */,
-				DB5D58DC2BEBACDE000E7E36 /* BookingsView.swift in Sources */,
+				DB5D58DC2BEBACDE000E7E36 /* TicketsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

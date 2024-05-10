@@ -9,9 +9,10 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab: Tab = .movies
+    @State private var selectedTab: Tab
     
-    init(){
+    init(selectedTab: Tab = .movies){
+        _selectedTab = State(initialValue: selectedTab)
         UITabBar.appearance().isHidden = true
     }
     
@@ -23,8 +24,8 @@ struct ContentView: View {
                 HomeView()
                     .tag(Tab.movies)
                             
-                BookingsView()
-                    .tag(Tab.bookings)
+                TicketsView()
+                    .tag(Tab.tickets)
             }
             
             CustomTabBar(selectedTab: $selectedTab)
