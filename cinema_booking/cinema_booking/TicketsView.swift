@@ -55,6 +55,7 @@ struct TicketsView: View {
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.top)
     }
+    
     func deleteTicket(at offsets: IndexSet){
         tickets.remove(atOffsets: offsets)
     }
