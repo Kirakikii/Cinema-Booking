@@ -7,80 +7,83 @@
 
 import SwiftUI
 
+struct Ticket: Identifiable{
+    let id: Int
+    let filmName: String
+    let cinema: String
+    let date: String
+    let time: String
+    let seat: String
+    let image: String
+}
 
 
 struct TicketsView: View {
-    // Demo wireframe
-    let movies = [
-        Movies(name: "Movie 1", poster: "poster1"),
-        Movies(name: "Movie 2", poster: "poster2"),
-        Movies(name: "Movie 3", poster: "poster3"),
-        Movies(name: "Movie 4", poster: "poster4")
+    @State private var tickets = [
+        Ticket(id:1, filmName: "Film 1", cinema: "cinemaA", date: "2024-05-12", time: "19:00", seat: "A1", image: "poster1"),
+        Ticket(id:2, filmName: "Film 2", cinema: "cinemaA", date: "2024-05-12", time: "20:00", seat: "A2", image: "poster2")
     ]
+    // Demo wireframe
     
     var body: some View {
         VStack (spacing:0){
             TicketsNavBarView
             
-            ScrollView {
-                VStack {
-                    ForEach(movies, id: \.name) { movie in
-                        HStack {
-                            Image(movie.poster)
-                                .resizable()
-                                .frame(width: 100, height: 150)
-                                .cornerRadius(8)
-                                .padding()
-                            
-                            Text(movie.name)
-                                .font(.headline)
-                                .padding()
-                            
-                            Spacer()
+            List{
+                ForEach(tickets) {ticket in
+                    HStack {
+                        Image(systemName: ticket.image)
+                            .resizable()
+                            .frame(width:60, height:60)
+                            .cornerRadius(10)
+                            .padding()
+                        
+                        VStack(alignment: .leading) {
+                            Text("\(ticket.filmName)")
+                            Text("\(ticket.cinema)")
+                            Text("\(ticket.date)")
+                            Text("\(ticket.time)")
+                            Text("\(ticket.seat)")
                         }
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(8)
-                        .padding(.horizontal)
+                        Spacer()
                     }
+                    .padding(.vertical)
                 }
+                .onDelete(perform: deleteTicket)
             }
-            .padding(.top, 20)
-            .navigationBarHidden(true)
         }
+        .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.top)
     }
-}
+    func deleteTicket(at offsets: IndexSet){
+        tickets.remove(atOffsets: offsets)
+    }
     
-        
-        
-
-struct Movies {
-    let name: String
-    let poster: String  // Assume you have images named "poster1", "poster2", etc., in your assets
+    
+    
+    var TicketsNavBarView: some View {
+        VStack {
+            HStack{
+                //backButton
+                Spacer()
+                Text("Tickets")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.top, 40)
+                Spacer()
+                //backButton.opacity(0) //keep the title centred
+            }
+            //.padding()
+            .padding(.vertical, 25)
+            .padding(.bottom, 0)
+            .background(Color.indigo)
+        }
+    }
 }
 
 struct TicketsView_Previews: PreviewProvider {
     static var previews: some View {
         TicketsView()
-    }
-}
-
-var TicketsNavBarView: some View {
-    VStack {
-        HStack{
-            //backButton
-            Spacer()
-            Text("Tickets")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(.top, 40)
-            Spacer()
-            //backButton.opacity(0) //keep the title centred
-        }
-        //.padding()
-        .padding(.vertical, 25)
-        .padding(.bottom, 0)
-        .background(Color.indigo)
     }
 }
