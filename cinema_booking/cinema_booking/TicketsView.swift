@@ -2,7 +2,7 @@
 //  BookingsView.swift
 //  cinema_booking
 //
-//  Created by 吴泓昕 on 5/8/24.
+//  Created by 吴泓昕 on 5/8
 //
 
 import SwiftUI
