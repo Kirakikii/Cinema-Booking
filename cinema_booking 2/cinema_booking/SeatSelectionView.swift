@@ -38,6 +38,15 @@ struct SeatSelectionView: View {
                 
                 Spacer()
                 
+                Text("Seats Selected: \(selectedSeats.count)")
+                    .foregroundColor(.black)
+                    .padding(.bottom, 10)
+                
+                Text("Total Price: $\(selectedSeats.count * seatPrice)")
+                    .foregroundColor(.black)
+                
+                Spacer()
+                
                 confirmButton
                     .padding(.top, 20)
             }
