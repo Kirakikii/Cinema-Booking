@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+
 @main
 struct cinema_bookingApp: App {
     var sharedModelContainer: ModelContainer = {

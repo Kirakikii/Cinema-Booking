@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A862ED72BF06636002ACC49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A862ED62BF06636002ACC49 /* GoogleService-Info.plist */; };
+		1A862EDA2BF06753002ACC49 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1A862ED92BF06753002ACC49 /* FirebaseAnalytics */; };
+		1A862EDC2BF06753002ACC49 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A862EDB2BF06753002ACC49 /* FirebaseFirestore */; };
 		DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */; };
 		DB5D58C62BEAA67E000E7E36 /* cinema_bookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58C52BEAA67E000E7E36 /* cinema_bookingApp.swift */; };
 		DB5D58C82BEAA67E000E7E36 /* ContentView_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58C72BEAA67E000E7E36 /* ContentView_temp.swift */; };
@@ -44,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A862EDA2BF06753002ACC49 /* FirebaseAnalytics in Frameworks */,
+				1A862EDC2BF06753002ACC49 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +130,10 @@
 			dependencies = (
 			);
 			name = cinema_booking;
+			packageProductDependencies = (
+				1A862ED92BF06753002ACC49 /* FirebaseAnalytics */,
+				1A862EDB2BF06753002ACC49 /* FirebaseFirestore */,
+			);
 			productName = cinema_booking;
 			productReference = DB5D58C22BEAA67E000E7E36 /* cinema_booking.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +162,9 @@
 				Base,
 			);
 			mainGroup = DB5D58B92BEAA67D000E7E36;
+			packageReferences = (
+				1A862ED82BF06753002ACC49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DB5D58C32BEAA67E000E7E36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -394,6 +405,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A862ED82BF06753002ACC49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A862ED92BF06753002ACC49 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A862ED82BF06753002ACC49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		1A862EDB2BF06753002ACC49 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A862ED82BF06753002ACC49 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB5D58BA2BEAA67D000E7E36 /* Project object */;
 }
