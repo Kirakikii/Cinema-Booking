@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A862ED72BF06636002ACC49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A862ED62BF06636002ACC49 /* GoogleService-Info.plist */; };
 		DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */; };
 		DB5D58C62BEAA67E000E7E36 /* cinema_bookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58C52BEAA67E000E7E36 /* cinema_bookingApp.swift */; };
 		DB5D58C82BEAA67E000E7E36 /* ContentView_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58C72BEAA67E000E7E36 /* ContentView_temp.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A862ED62BF06636002ACC49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmView.swift; sourceTree = "<group>"; };
 		DB5D58C22BEAA67E000E7E36 /* cinema_booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinema_booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5D58C52BEAA67E000E7E36 /* cinema_bookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinema_bookingApp.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		DB5D58C42BEAA67E000E7E36 /* cinema_booking */ = {
 			isa = PBXGroup;
 			children = (
+				1A862ED62BF06636002ACC49 /* GoogleService-Info.plist */,
 				DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */,
 				DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */,
 				DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */,
@@ -167,6 +170,7 @@
 			files = (
 				DB5D58CF2BEAA685000E7E36 /* Preview Assets.xcassets in Resources */,
 				DB5D58CC2BEAA685000E7E36 /* Assets.xcassets in Resources */,
+				1A862ED72BF06636002ACC49 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
