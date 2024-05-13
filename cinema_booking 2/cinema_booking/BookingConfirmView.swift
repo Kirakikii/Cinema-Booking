@@ -37,6 +37,7 @@ struct BookingConfirmView: View {
             .padding(.bottom, 40)
             
             
+            
         }
         .navigationBarHidden(true)
     }
