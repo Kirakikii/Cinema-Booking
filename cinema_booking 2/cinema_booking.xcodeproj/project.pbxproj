@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		64726C612BEFDBE500201B51 /* BookDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64726C602BEFDBE500201B51 /* BookDetailModel.swift */; };
-		64E6145C2BF1C0AD00027534 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E6145B2BF1C0AD00027534 /* MovieDetailView.swift */; };
 		DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */; };
 		DB5D58C62BEAA67E000E7E36 /* cinema_bookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58C52BEAA67E000E7E36 /* cinema_bookingApp.swift */; };
 		DB5D58C82BEAA67E000E7E36 /* ContentView_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D58C72BEAA67E000E7E36 /* ContentView_temp.swift */; };
@@ -25,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		64726C602BEFDBE500201B51 /* BookDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailModel.swift; sourceTree = "<group>"; };
-		64E6145B2BF1C0AD00027534 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmView.swift; sourceTree = "<group>"; };
 		DB5D58C22BEAA67E000E7E36 /* cinema_booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinema_booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5D58C52BEAA67E000E7E36 /* cinema_bookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinema_bookingApp.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				64726C5F2BEFDBC200201B51 /* Model */,
 				64726C5D2BEFDB1C00201B51 /* Factors */,
 				DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */,
-				64E6145B2BF1C0AD00027534 /* MovieDetailView.swift */,
 				DB5D58D52BEAA6D3000E7E36 /* SeatSelectionView.swift */,
 				DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */,
 				DB5D58D72BEBA4CA000E7E36 /* ContentView.swift */,
@@ -205,7 +202,6 @@
 				DB5D58DA2BEBAC7E000E7E36 /* HomeView.swift in Sources */,
 				DB5D58DE2BEBBAF6000E7E36 /* CustomTabBar.swift in Sources */,
 				DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */,
-				64E6145C2BF1C0AD00027534 /* MovieDetailView.swift in Sources */,
 				DB5D58CA2BEAA67E000E7E36 /* Item_temp.swift in Sources */,
 				DB89C1282BECB08B004E0E01 /* CinemaPicker.swift in Sources */,
 				DB5D58C62BEAA67E000E7E36 /* cinema_bookingApp.swift in Sources */,

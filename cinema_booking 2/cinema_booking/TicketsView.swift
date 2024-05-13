@@ -20,6 +20,8 @@ struct Ticket: Identifiable{
 
 struct TicketsView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @AppStorage("movieDetail") var movieDetailData: String = ""
     
     @State private var tickets = [
@@ -70,6 +72,9 @@ struct TicketsView: View {
     var TicketsNavBarView: some View {
         VStack {
             HStack{
+                backButton
+                    .offset(y: 20)
+                    .offset(x: 12)
                 //backButton
                 Spacer()
                 Text("Tickets")
@@ -78,6 +83,7 @@ struct TicketsView: View {
                     .foregroundColor(.white)
                     .padding(.top, 40)
                 Spacer()
+                backButton.opacity(0)
                 //backButton.opacity(0) //keep the title centred
             }
             //.padding()

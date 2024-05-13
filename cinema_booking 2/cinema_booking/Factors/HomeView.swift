@@ -121,31 +121,26 @@ struct MovieDetailView: View {
     @State private var selectedTimeIndex = -1
     @State private var showFullDescription = false
     
-    // These are placeholders for the movie details and ratings
-    private let movieDescription = "Dune: Part Two is a 2024 American epic science fiction film directed and produced by Denis Villeneuve, who co-wrote the screenplay with Jon Spaihts."
+    private let movieDescription = "Dune: Part Two is a 2024 American epic science fiction film directed and produced by Denis Villeneuve."
     private let movieRating = "8.5/10"
     
-    // This function generates the next 7 days including today
     private var dateOptions: [(String, String, String)] {
         let calendar = Calendar.current
         return (0..<7).map { i in
             let date = calendar.date(byAdding: .day, value: i, to: Date())!
             let day = calendar.component(.day, from: date)
-            let weekday = calendar.weekdaySymbols[calendar.component(.weekday, from: date) - 1]
+            let weekday = calendar.shortWeekdaySymbols[calendar.component(.weekday, from: date) - 1]
             let month = calendar.shortMonthSymbols[calendar.component(.month, from: date) - 1]
             return (String(day), weekday, month)
         }
     }
     
-    private let timeOptions = [
-        "10:00", "12:35", "14:00", "15:55", "18:15", "21:30", "23:05"
-    ]
+    private let timeOptions = ["10:00", "12:35", "14:00", "15:55", "18:15", "21:30", "23:05"]
     
     private var availableTimeOptions: [String] {
         let currentTime = Calendar.current.dateComponents([.hour, .minute], from: Date())
         let currentHour = currentTime.hour ?? 0
         let currentMinute = currentTime.minute ?? 0
-        
         return timeOptions.filter { timeString in
             let components = timeString.components(separatedBy: ":")
             guard components.count == 2,
@@ -153,8 +148,6 @@ struct MovieDetailView: View {
                   let minute = Int(components[1]) else {
                 return false
             }
-            
-            // Only allow times that are in the future compared to the current time
             return hour > currentHour || (hour == currentHour && minute > currentMinute)
         }
     }
@@ -240,16 +233,17 @@ struct MovieDetailView: View {
                             }
                         }
                     }
+                    
+                    // NavigationLink with the entire button as the trigger
                     NavigationLink(destination: SeatSelectionView()) {
-                        Button("Next") {
-                            // Implement the next button action here
-                        }
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(selectedTimeIndex != -1 ? Color.blue : Color.gray)
-                        .cornerRadius(10)
+                        Text("Next")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(selectedTimeIndex != -1 ? Color.blue : Color.gray)
+                            .cornerRadius(10)
                     }
+                    .disabled(selectedTimeIndex == -1) // Disable the button if no time is selected
                     Spacer()
                 }
                 .padding()
