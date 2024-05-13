@@ -37,6 +37,7 @@ struct BookingConfirmView: View {
             .padding(.bottom, 40)
             
             
+            
         }
         .navigationBarHidden(true)
     }
@@ -45,14 +46,14 @@ struct BookingConfirmView: View {
 var ConfirmNavBarView: some View {
     VStack {
         HStack{
-            backButton
+            //backButton
             Spacer()
             //Text("Seat Selection")
                 .font(.title2)
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
             Spacer()
-            backButton.opacity(0) //keep the title centred
+            //backButton.opacity(0) //keep the title centred
         }
         .padding()
         .padding(.horizontal, 40)
