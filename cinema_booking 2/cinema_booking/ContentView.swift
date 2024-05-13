@@ -16,12 +16,14 @@ struct ContentView: View {
             TabView(selection: $selectedTab){
                 HomeView()
                     .tag(Tab.movies)
+                
+                
                             
                 TicketsView()
                     .tag(Tab.tickets)
             }
             
-            CustomTabBar(selectedTab: $selectedTab)
+            //CustomTabBar(selectedTab: $selectedTab)
         }
         .edgesIgnoringSafeArea(.bottom)
     }

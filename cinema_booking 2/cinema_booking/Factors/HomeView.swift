@@ -27,7 +27,7 @@ struct HomeView: View {
                     CinemaPicker(
                         selectedCinema: $selectedCinema,
                         selectedDate: $selectedDate,
-                        cinemas: ["Select the cinema", "Events - Broadway", "Pacific Cinema - Central Park", "Events - Town Hall", "Ritz - Randwick", "Dendy Cinema - Newtown"])
+                        cinemas: ["Select the cinemas", "Events - Broadway", "Pacific Cinema - Central Park", "Events - Town Hall", "Ritz - Randwick", "Dendy Cinema - Newtown"])
                     
                     ScrollView {
                         VStack(spacing: 20) {
@@ -78,22 +78,40 @@ struct HomeView: View {
 
 var CustomNavBarView: some View {
     VStack {
-        HStack{
-            //backButton
-            Spacer()
-            Text("Home")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(.top, 40)
-            Spacer()
-            //backButton.opacity(0) //keep the title centred
-        }
-        //.padding()
-        .padding(.vertical, 25)
-        .padding(.bottom, 0)
-        .background(Color.indigo)
-    }
+                HStack {
+                    // 左侧透明按钮，使用相同的大小来平衡布局
+                    Button(action: {}) {
+                        Image(systemName: "ticket")
+                            .opacity(0) // 透明
+                            .imageScale(.large) // 使用与右侧相同的图标大小
+                            .padding(10) // 增加填充来扩大点击区域
+                    }
+
+                    Spacer()
+
+                    Text("Home")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.top, 40)
+
+                    Spacer()
+
+                    // 票形图标按钮，点击后跳转到 TicketsView
+                    NavigationLink(destination: TicketsView()) {
+                        Image(systemName: "ticket")
+                            .foregroundColor(.white)
+                            .imageScale(.large) // 增大图标
+                            .padding(10) // 增加填充来扩大点击区域
+                    }
+                    .background(Color.indigo) // 确保填充区域也有相同的背景色
+                    .clipShape(Circle()) // 使用圆形剪裁来美化点击区域
+                    .offset(y: 22)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 25)
+                .background(Color.indigo)
+            }
 }
 
 struct MovieDetailView: View {
@@ -245,3 +263,4 @@ struct MovieDetailView: View {
         }
     }
 }
+
