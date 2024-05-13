@@ -49,6 +49,9 @@ struct SeatSelectionView: View {
                 
                 confirmButton
                     .padding(.top, 20)
+                
+                Spacer()
+
             }
             .blur(radius: showingSummary ? 20 : 0)
             .animation(.easeInOut, value: showingSummary)
@@ -134,6 +137,8 @@ struct SeatSelectionView: View {
         .background(selectedSeats.isEmpty ? Color.gray : Color.indigo)
         .cornerRadius(10)
     }
+    
+    
     
 
                 
