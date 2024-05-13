@@ -27,7 +27,7 @@ struct HomeView: View {
                     CinemaPicker(
                         selectedCinema: $selectedCinema,
                         selectedDate: $selectedDate,
-                        cinemas: ["选择影院", "Events - Broadway", "Pacific Cinema - Central Park", "Events - Town Hall", "Ritz - Randwick", "Dendy Cinema - Newtown"])
+                        cinemas: ["Select the cinema", "Events - Broadway", "Pacific Cinema - Central Park", "Events - Town Hall", "Ritz - Randwick", "Dendy Cinema - Newtown"])
                     
                     ScrollView {
                         VStack(spacing: 20) {
