@@ -18,6 +18,7 @@ struct SeatSelectionView: View {
     @State private var showingSummary = false
     @State private var createNewBook = false
     
+    let film: Film
     
     let rows = ["A", "B", "C", "D"]
     let columns = 1...10
