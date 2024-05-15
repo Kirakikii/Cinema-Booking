@@ -135,7 +135,7 @@ struct MovieDetailView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: SeatSelectionView(viewRouter: viewRouter)) {
+                    NavigationLink(destination: SeatSelectionView(viewRouter: viewRouter, film: film)) {
                         Button("Next") {
                             // Implement the next button action here
                             viewRouter.showTabBar = false

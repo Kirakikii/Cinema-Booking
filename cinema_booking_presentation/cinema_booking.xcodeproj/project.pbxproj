@@ -61,7 +61,6 @@
 			children = (
 				DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */,
 				DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */,
-				DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */,
 			);
 			path = Factors;
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 				64726C5F2BEFDBC200201B51 /* Model */,
 				64726C5D2BEFDB1C00201B51 /* Factors */,
 				DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */,
+				DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */,
 				DB4823C42BF218C200358709 /* MovieDetailView.swift */,
 				DB5D58D52BEAA6D3000E7E36 /* SeatSelectionView.swift */,
 				DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */,
