@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64726C612BEFDBE500201B51 /* BookDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64726C602BEFDBE500201B51 /* BookDetailModel.swift */; };
+		D31304702BF49307008BACD6 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313046F2BF49307008BACD6 /* UserViewModel.swift */; };
 		DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */; };
 		DB4823C32BF2173000358709 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4823C22BF2173000358709 /* Film.swift */; };
 		DB4823C52BF218C200358709 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4823C42BF218C200358709 /* MovieDetailView.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		64726C602BEFDBE500201B51 /* BookDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailModel.swift; sourceTree = "<group>"; };
+		D313046F2BF49307008BACD6 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmView.swift; sourceTree = "<group>"; };
 		DB4823C22BF2173000358709 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		DB4823C42BF218C200358709 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				64726C602BEFDBE500201B51 /* BookDetailModel.swift */,
 				DB4823C22BF2173000358709 /* Film.swift */,
+				D313046F2BF49307008BACD6 /* UserViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				DB5D58D82BEBA4CA000E7E36 /* ContentView.swift in Sources */,
 				DB5D58C82BEAA67E000E7E36 /* ContentView_temp.swift in Sources */,
 				DB4823C52BF218C200358709 /* MovieDetailView.swift in Sources */,
+				D31304702BF49307008BACD6 /* UserViewModel.swift in Sources */,
 				DB5D58DA2BEBAC7E000E7E36 /* HomeView.swift in Sources */,
 				DB5D58DE2BEBBAF6000E7E36 /* CustomTabBar.swift in Sources */,
 				DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */,
