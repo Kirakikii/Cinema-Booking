@@ -5,8 +5,8 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var userVM: UserViewModel
-    @State var user  = "123"
-    @State var pwd  = "123"
+    @State var user  = ""
+    @State var pwd  = ""
     @State var showAlert : Bool = false
     @State var alertText = ""
     @State var showNet = false
@@ -26,7 +26,7 @@ struct LoginView: View {
                     Text("Username")
                         
                         
-                    TextField("please input username" , text:$user)
+                    TextField("Input username" , text:$user)
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                 }
@@ -36,7 +36,7 @@ struct LoginView: View {
                 HStack(alignment: .center, spacing: 15) {
                     Text("Password")
                        
-                    SecureField("please input password" , text:$pwd )
+                    SecureField("Input password" , text:$pwd )
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                         
@@ -72,8 +72,8 @@ struct LoginView: View {
                         .foregroundColor(Color.white)
                         .background(Color.indigo)
                 }
-                .padding(.top,30)
-                .cornerRadius(10)
+                .padding(.top,20)
+                .cornerRadius(8)
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text(alertText))
                 }

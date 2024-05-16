@@ -29,7 +29,7 @@ struct RegisterView: View {
                 HStack(alignment: .center, spacing: 17) {
                     Text("Username")
                         
-                    TextField("Please input a username" , text:$user)
+                    TextField("New username" , text:$user)
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                 }
@@ -38,7 +38,7 @@ struct RegisterView: View {
                 //2password
                 HStack(alignment: .center, spacing: 20) {
                     Text("Password")
-                    SecureField("Please input a password" , text:$pwd )
+                    SecureField("Input password" , text:$pwd )
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                         
