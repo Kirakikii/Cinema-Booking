@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SeatSelectionView: View {
-    @Environment(\.modelContext) private var context
+    @EnvironmentObject var userVM: UserViewModel
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.presentationMode) var presentationMode
+    
     
     @ObservedObject var viewRouter: ViewRouter
     
@@ -18,6 +18,9 @@ struct SeatSelectionView: View {
     @State private var showingSummary = false
     @State private var createNewBook = false
     
+    let film: Film
+    let selectedDate: Date
+    let selectedTime: String
     
     let rows = ["A", "B", "C", "D"]
     let columns = 1...10
@@ -131,7 +134,12 @@ struct SeatSelectionView: View {
     var confirmButton: some View {
         Button(action: {
             if !seat.isEmpty {
-                showingSummary = true  // Trigger the summary view
+                let ticket = Ticket(id: UUID().uuidString, filmName: film.filmName, cinema: film.filmName, date: selectedDate, time: selectedTime, seat: seat.joined(separator: ","), image: film.imageName,documentID: "")
+                let result = userVM.addTickets(ticket: ticket)
+                if result {
+                    showingSummary = true  // Trigger the summary view
+                }
+                
                 //createNewBook = true
                 
                 //let newBook = BookingDetailModel(filmName: "", cinema: "", date: Date(), time: "", seat: seat.joined(separator: ", "))  // Assume you want to join all selected seats into one string

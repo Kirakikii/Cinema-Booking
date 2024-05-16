@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookingConfirmView: View {
-   
+    let seat: Set<String> = []
     
     var body: some View {
         VStack{

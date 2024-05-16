@@ -17,6 +17,9 @@ struct MovieDetailView: View {
     @State private var selectedDateIndex = 0
     @State private var selectedTimeIndex = -1
     @State private var showFullDescription = false
+    @State var showSeatSelectionView = false
+    @State var selectedDate = Date()
+    @State var selectedTime = ""
     
     // This function generates the next 7 days including today
     private var dateOptions: [(String, String, String)] {
@@ -135,18 +138,18 @@ struct MovieDetailView: View {
                             }
                         }
                     }
-                    NavigationLink(destination: SeatSelectionView(viewRouter: viewRouter)) {
-                        Button("Next") {
-                            // Implement the next button action here
-                            viewRouter.showTabBar = false
-                        }
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(selectedTimeIndex != -1 ? Color.indigo : Color.gray)
-                        .cornerRadius(10)
+                    Button {
+                        viewRouter.showTabBar = false
+                    } label: {
+                        Text("Next")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(selectedTimeIndex != -1 ? Color.indigo : Color.gray)
+                            .cornerRadius(10)
                     }
-                    Spacer()
+                    
+                    //Spacer()
                 }
                 .padding()
             }
@@ -161,7 +164,9 @@ struct MovieDetailView: View {
             .onAppear {
                 viewRouter.showTabBar = false
             }
-            
+            .navigationDestination(isPresented: $showSeatSelectionView) {
+                SeatSelectionView(viewRouter: viewRouter, film: film, selectedDate: selectedDate, selectedTime: selectedTime)
+            }
         }
         
     }

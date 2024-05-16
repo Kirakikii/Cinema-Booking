@@ -19,15 +19,12 @@ struct Ticket: Identifiable{
 
 
 struct TicketsView: View {
-    
+    @EnvironmentObject var userVM: UserViewModel
     
     @ObservedObject var viewRouter: ViewRouter
     @AppStorage("movieDetail") var movieDetailData: String = ""
     
-    @State private var tickets = [
-        Ticket(id:1, filmName: "Dune 2", cinema: "Events - Broadway", date: "2024-05-14", time: "10:00", seat: "B3, B4", image: "poster1")//,
-        //Ticket(id:2, filmName: "Film 2", cinema: "cinemaA", date: "2024-05-12", time: "20:00", seat: "A2", image: "poster2")
-    ]
+    @State private var tickets = [Ticket()]
     // Demo wireframe
     
     
@@ -61,9 +58,16 @@ struct TicketsView: View {
         }
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.top)
+        .task{
+            tickets = await userVM .getAllTickets()
+        }
     }
     
     func deleteTicket(at offsets: IndexSet){
+        offsets.forEach({
+            index in
+           _ = userVM.removeTickets(ticket: tickets[index])
+        })
         tickets.remove(atOffsets: offsets)
     }
     
