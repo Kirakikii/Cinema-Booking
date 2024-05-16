@@ -18,11 +18,18 @@ struct RegisterView: View {
     var body: some View {
         NavigationView {
             VStack{
+                Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 250, height: 250)
+                    .clipped()
+                    .cornerRadius(50)
+                Spacer()
                 //1user
-                HStack(alignment: .center, spacing: 20) {
-                    Text("user")
+                HStack(alignment: .center, spacing: 17) {
+                    Text("Username")
                         
-                    TextField("please input user" , text:$user)
+                    TextField("Please input a username" , text:$user)
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                 }
@@ -30,8 +37,8 @@ struct RegisterView: View {
                 
                 //2password
                 HStack(alignment: .center, spacing: 20) {
-                    Text("password")
-                    SecureField("please input password" , text:$pwd )
+                    Text("Password")
+                    SecureField("Please input a password" , text:$pwd )
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                         
@@ -63,7 +70,7 @@ struct RegisterView: View {
                     Text("Register")
                         .frame(width: 200, height: 40, alignment: .center)
                         .foregroundColor(Color.white)
-                        .background(Color.blue)
+                        .background(Color.indigo)
                 }
                 .cornerRadius(8)
                 .padding(.top,30)
