@@ -14,19 +14,27 @@ struct LoginView: View {
         NavigationView {
             VStack{
                 //1user
-                HStack(alignment: .center, spacing: 20) {
-                    Text("user")
+                Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 250, height: 250)
+                    .clipped()
+                    .cornerRadius(50)
+                
+                Spacer()
+                HStack(alignment: .center, spacing: 10) {
+                    Text("Username")
                         
                         
-                    TextField("please input user" , text:$user)
+                    TextField("please input username" , text:$user)
                         .textFieldStyle(.roundedBorder)
                         .padding([.leading,.trailing],10)
                 }
                 .padding(.leading,20)
                 
                 //2password
-                HStack(alignment: .center, spacing: 20) {
-                    Text("password")
+                HStack(alignment: .center, spacing: 15) {
+                    Text("Password")
                        
                     SecureField("please input password" , text:$pwd )
                         .textFieldStyle(.roundedBorder)
@@ -35,6 +43,7 @@ struct LoginView: View {
                 }
                 .padding(.leading,20)
                 
+        
                 //3 login
                 Button {
                     if user.count == 0 || pwd.count == 0{
@@ -61,9 +70,10 @@ struct LoginView: View {
                     Text("Login")
                         .frame(width: 200, height: 40, alignment: .center)
                         .foregroundColor(Color.white)
-                        .background(Color.blue)
+                        .background(Color.indigo)
                 }
                 .padding(.top,30)
+                .cornerRadius(10)
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text(alertText))
                 }
@@ -72,6 +82,8 @@ struct LoginView: View {
                 NavigationLink(destination: RegisterView()) {
                     Text("Register")
                         .frame(width: 200, height: 40, alignment: .center)
+                        .foregroundColor(Color.white)
+                        .background(Color.pink)
                 }
                 .cornerRadius(8)
                 .padding(.top,20)
