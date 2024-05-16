@@ -46,7 +46,7 @@ class UserViewModel: ObservableObject {
             if documents.count > 0 {
                 return false
             }
-            firestoreDB.collection("User").addDocument(data: ["userID":UUID().uuidString, "user":user,"password": pwd])
+            try await firestoreDB.collection("User").addDocument(data: ["userID":UUID().uuidString, "user":user,"password": pwd])
             return true
             
         } catch  {

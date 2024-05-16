@@ -1,9 +1,4 @@
-//
-//  Login.swift
-//  cinema_booking
-//
-//  Created by XIN TONG HOU on 16/5/2024.
-//
+
 
 import SwiftUI
 

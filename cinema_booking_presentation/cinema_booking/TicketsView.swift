@@ -7,14 +7,16 @@
 
 import SwiftUI
 
+
 struct Ticket: Identifiable{
-    let id: Int
+    let id: String
     let filmName: String
     let cinema: String
-    let date: String
+    let date: Date
     let time: String
     let seat: String
     let image: String
+    let documentID: String
 }
 
 
@@ -24,7 +26,7 @@ struct TicketsView: View {
     @ObservedObject var viewRouter: ViewRouter
     @AppStorage("movieDetail") var movieDetailData: String = ""
     
-    @State private var tickets = [Ticket()]
+    @State private var tickets = [Ticket]()
     // Demo wireframe
     
     

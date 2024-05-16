@@ -10,6 +10,15 @@
 		6430FEA82BF5014B00503C15 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430FEA72BF5014B00503C15 /* LoginView.swift */; };
 		6430FEAA2BF5017E00503C15 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430FEA92BF5017E00503C15 /* RegisterView.swift */; };
 		64726C612BEFDBE500201B51 /* BookDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64726C602BEFDBE500201B51 /* BookDetailModel.swift */; };
+		64E054FA2BF5A86000A83685 /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E054F92BF5A86000A83685 /* LoadingViewModifier.swift */; };
+		64E054FC2BF5A8FD00A83685 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E054FB2BF5A8FD00A83685 /* GoogleService-Info.plist */; };
+		64E055002BF5AC3D00A83685 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 64E054FF2BF5AC3D00A83685 /* FirebaseStorage */; };
+		64E055022BF5ACAC00A83685 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 64E055012BF5ACAC00A83685 /* FirebaseDatabase */; };
+		64E055042BF5ACAC00A83685 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64E055032BF5ACAC00A83685 /* FirebaseDatabaseSwift */; };
+		64E055062BF5ACAC00A83685 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 64E055052BF5ACAC00A83685 /* FirebaseFirestore */; };
+		64E055082BF5ACAC00A83685 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 64E055072BF5ACAC00A83685 /* FirebaseFirestoreCombine-Community */; };
+		64E0550A2BF5ACAC00A83685 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64E055092BF5ACAC00A83685 /* FirebaseFirestoreSwift */; };
+		64E0550C2BF5ACAC00A83685 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 64E0550B2BF5ACAC00A83685 /* FirebaseStorageCombine-Community */; };
 		D31A67C62BF4FEF60038E2AB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31A67C52BF4FEF60038E2AB /* UserViewModel.swift */; };
 		DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */; };
 		DB4823C32BF2173000358709 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4823C22BF2173000358709 /* Film.swift */; };
@@ -32,6 +41,9 @@
 		6430FEA72BF5014B00503C15 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6430FEA92BF5017E00503C15 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		64726C602BEFDBE500201B51 /* BookDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailModel.swift; sourceTree = "<group>"; };
+		64E054F92BF5A86000A83685 /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
+		64E054FB2BF5A8FD00A83685 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64E054FE2BF5AA5D00A83685 /* cinema-booking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "cinema-booking-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D31A67C52BF4FEF60038E2AB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmView.swift; sourceTree = "<group>"; };
 		DB4823C22BF2173000358709 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
@@ -56,6 +68,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E055042BF5ACAC00A83685 /* FirebaseDatabaseSwift in Frameworks */,
+				64E0550C2BF5ACAC00A83685 /* FirebaseStorageCombine-Community in Frameworks */,
+				64E055062BF5ACAC00A83685 /* FirebaseFirestore in Frameworks */,
+				64E055022BF5ACAC00A83685 /* FirebaseDatabase in Frameworks */,
+				64E055082BF5ACAC00A83685 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				64E055002BF5AC3D00A83685 /* FirebaseStorage in Frameworks */,
+				64E0550A2BF5ACAC00A83685 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,7 @@
 			children = (
 				DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */,
 				DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */,
+				64E054F92BF5A86000A83685 /* LoadingViewModifier.swift */,
 				DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */,
 			);
 			path = Factors;
@@ -117,6 +137,8 @@
 		DB5D58C42BEAA67E000E7E36 /* cinema_booking */ = {
 			isa = PBXGroup;
 			children = (
+				64E054FE2BF5AA5D00A83685 /* cinema-booking-Info.plist */,
+				64E054FB2BF5A8FD00A83685 /* GoogleService-Info.plist */,
 				64726C5F2BEFDBC200201B51 /* Model */,
 				64726C5D2BEFDB1C00201B51 /* Factors */,
 				DB5D58DB2BEBACDE000E7E36 /* TicketsView.swift */,
@@ -160,6 +182,15 @@
 			dependencies = (
 			);
 			name = cinema_booking;
+			packageProductDependencies = (
+				64E054FF2BF5AC3D00A83685 /* FirebaseStorage */,
+				64E055012BF5ACAC00A83685 /* FirebaseDatabase */,
+				64E055032BF5ACAC00A83685 /* FirebaseDatabaseSwift */,
+				64E055052BF5ACAC00A83685 /* FirebaseFirestore */,
+				64E055072BF5ACAC00A83685 /* FirebaseFirestoreCombine-Community */,
+				64E055092BF5ACAC00A83685 /* FirebaseFirestoreSwift */,
+				64E0550B2BF5ACAC00A83685 /* FirebaseStorageCombine-Community */,
+			);
 			productName = cinema_booking;
 			productReference = DB5D58C22BEAA67E000E7E36 /* cinema_booking.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +219,9 @@
 				Base,
 			);
 			mainGroup = DB5D58B92BEAA67D000E7E36;
+			packageReferences = (
+				64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DB5D58C32BEAA67E000E7E36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5D58CF2BEAA685000E7E36 /* Preview Assets.xcassets in Resources */,
+				64E054FC2BF5A8FD00A83685 /* GoogleService-Info.plist in Resources */,
 				DB5D58CC2BEAA685000E7E36 /* Assets.xcassets in Resources */,
 				DBB2425D2BF20DFE00504F50 /* FilmDetails.json in Resources */,
 			);
@@ -226,6 +261,7 @@
 				DB5D58DE2BEBBAF6000E7E36 /* CustomTabBar.swift in Sources */,
 				DB12FB302BEDCCB90039FDCD /* BookingConfirmView.swift in Sources */,
 				DB5D58CA2BEAA67E000E7E36 /* Item_temp.swift in Sources */,
+				64E054FA2BF5A86000A83685 /* LoadingViewModifier.swift in Sources */,
 				DB89C1282BECB08B004E0E01 /* CinemaPicker.swift in Sources */,
 				DB5D58C62BEAA67E000E7E36 /* cinema_bookingApp.swift in Sources */,
 				6430FEAA2BF5017E00503C15 /* RegisterView.swift in Sources */,
@@ -366,6 +402,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"cinema_booking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "cinema-booking-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -394,6 +431,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"cinema_booking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "cinema-booking-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,6 +472,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64E054FF2BF5AC3D00A83685 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		64E055012BF5ACAC00A83685 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		64E055032BF5ACAC00A83685 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		64E055052BF5ACAC00A83685 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		64E055072BF5ACAC00A83685 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		64E055092BF5ACAC00A83685 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		64E0550B2BF5ACAC00A83685 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E054FD2BF5A93C00A83685 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB5D58BA2BEAA67D000E7E36 /* Project object */;
 }
