@@ -128,6 +128,7 @@ struct MovieDetailView: View {
                         ForEach(availableTimeOptions, id: \.self) { time in
                             Button(action: {
                                 selectedTimeIndex = availableTimeOptions.firstIndex(of: time)!
+                                selectedTime = time
                             }) {
                                 Text(time)
                                     .foregroundColor(selectedTimeIndex == availableTimeOptions.firstIndex(of: time)! ? .black : .black.opacity(0.7))
@@ -140,6 +141,7 @@ struct MovieDetailView: View {
                     }
                     Button {
                         viewRouter.showTabBar = false
+                        showSeatSelectionView = true
                     } label: {
                         Text("Next")
                             .foregroundColor(.white)

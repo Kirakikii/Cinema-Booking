@@ -25,7 +25,7 @@ struct SeatSelectionView: View {
     let rows = ["A", "B", "C", "D"]
     let columns = 1...10
     let seatPrice = 15
-    
+    @State var showNet = false
     var body: some View {
         ZStack {
             VStack {
@@ -64,6 +64,7 @@ struct SeatSelectionView: View {
                 summaryCard
             }
         }
+        .withLoading(showAlert: $showNet, msg: .constant("Loading"))
         .navigationBarBackButtonHidden(true)  // 尝试在这里隐藏返回按钮
         .navigationBarTitle("", displayMode: .inline)
         
@@ -135,7 +136,9 @@ struct SeatSelectionView: View {
         Button(action: {
             if !seat.isEmpty {
                 let ticket = Ticket(id: UUID().uuidString, filmName: film.filmName, cinema: film.filmName, date: selectedDate, time: selectedTime, seat: seat.joined(separator: ","), image: film.imageName,documentID: "")
+                showNet = true
                 let result = userVM.addTickets(ticket: ticket)
+                showNet = false
                 if result {
                     showingSummary = true  // Trigger the summary view
                 }

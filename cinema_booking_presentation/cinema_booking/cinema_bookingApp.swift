@@ -40,9 +40,12 @@ struct cinema_bookingApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if userVM.isLogin {
+                ContentView().environmentObject(userVM)
+            } else {
+                LoginView().environmentObject(userVM)
+            }
         }
-        .modelContainer(for: BookingDetailModel.self)
     }
     
     init(){

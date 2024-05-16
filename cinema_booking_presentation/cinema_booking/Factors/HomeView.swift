@@ -19,7 +19,7 @@ struct HomeView: View {
     let films: [Film] = Bundle.main.decode([Film].self, from: "FilmDetails.json")
     
     var body: some View {
-        NavigationView {
+        NavigationStack{
             VStack(spacing: 0) {
                 CustomNavBarView
                 
