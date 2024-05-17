@@ -12,7 +12,7 @@ class UserViewModel: ObservableObject {
     init() {
     }
     
-    
+    //test whether user input correct account and password when user try to login
     func login(user:String, pwd: String) async -> Bool {
         //
         let querySnapshot : Query = firestoreDB.collection("User")
@@ -28,7 +28,7 @@ class UserViewModel: ObservableObject {
         return false
     }
     
-    
+    //user try to register a new account
     func register(user:String, pwd: String) async -> Bool {
         
         //for searching this history/record
@@ -48,7 +48,7 @@ class UserViewModel: ObservableObject {
         return false
     }
     
-    //
+    //add booking details to database
     func addTickets(ticket:Ticket) -> Bool {
         //
         let formatter = DateFormatter()
@@ -68,7 +68,7 @@ class UserViewModel: ObservableObject {
         return true
     }
     
-    //
+    //add the booking detail into a list
     func getAllTickets() async -> [Ticket] {
    
         var list = [Ticket]()
@@ -102,7 +102,7 @@ class UserViewModel: ObservableObject {
         return list
     }
     
-    //
+    //cancel booking
     func removeTickets(ticket:Ticket) -> Bool {
         firestoreDB.collection("Booking").document(ticket.documentID).delete()
         return true

@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 
 //Define the model for Ticket

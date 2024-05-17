@@ -87,7 +87,6 @@
 				DB5D58DD2BEBBAF6000E7E36 /* CustomTabBar.swift */,
 				DB89C1272BECB08A004E0E01 /* CinemaPicker.swift */,
 				64E054F92BF5A86000A83685 /* LoadingViewModifier.swift */,
-				DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */,
 			);
 			path = Factors;
 			sourceTree = "<group>";
@@ -109,13 +108,6 @@
 				DB5D58C92BEAA67E000E7E36 /* Item_temp.swift */,
 			);
 			path = DefaultTemplate;
-			sourceTree = "<group>";
-		};
-		DB12FB2E2BEDC4F80039FDCD /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DB5D58B92BEAA67D000E7E36 = {
@@ -147,11 +139,11 @@
 				DB12FB2F2BEDCCB90039FDCD /* BookingConfirmView.swift */,
 				DB5D58D72BEBA4CA000E7E36 /* ContentView.swift */,
 				DB5D58C52BEAA67E000E7E36 /* cinema_bookingApp.swift */,
+				DB5D58D92BEBAC7E000E7E36 /* HomeView.swift */,
 				6430FEA72BF5014B00503C15 /* LoginView.swift */,
 				6430FEA92BF5017E00503C15 /* RegisterView.swift */,
 				DBB2425C2BF20DFD00504F50 /* FilmDetails.json */,
 				DB12FB2D2BEDC4DD0039FDCD /* DefaultTemplate */,
-				DB12FB2E2BEDC4F80039FDCD /* View */,
 				DB5D58CB2BEAA685000E7E36 /* Assets.xcassets */,
 				DB5D58CD2BEAA685000E7E36 /* Preview Content */,
 			);
