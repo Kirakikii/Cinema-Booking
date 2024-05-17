@@ -62,7 +62,7 @@ struct LoginView: View {
                             userVM.isLogin = true
                         } else {
                             self.showAlert = true
-                            alertText = "login error"
+                            alertText = "Login error"
                         }
                         
                         
