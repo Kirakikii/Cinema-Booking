@@ -1,11 +1,3 @@
-//
-//  File.swift
-//  cinema_booking
-//
-//  Created by XIN TONG HOU on 12/5/2024.
-//
-
-
 import Foundation
 import SwiftData
 

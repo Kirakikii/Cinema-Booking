@@ -1,9 +1,3 @@
-//
-//  BookingConfirmView.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/10/24.
-//
 
 import SwiftUI
 
@@ -47,14 +41,14 @@ struct BookingConfirmView: View {
 var ConfirmNavBarView: some View {
     VStack {
         HStack{
-            //backButton
+           
             Spacer()
-            //Text("Seat Selection")
+            
                 .font(.title2)
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
             Spacer()
-            //backButton.opacity(0) //keep the title centred
+            
         }
         .padding()
         .padding(.horizontal, 40)
@@ -64,7 +58,7 @@ var ConfirmNavBarView: some View {
 
 var backButton: some View{
     Button(action:{
-        //action for back button - back to previous screen
+        
     }){
         Image(systemName: "chevron.left")
             .foregroundColor(.white)
@@ -74,10 +68,3 @@ var backButton: some View{
     
 }
 
-//struct BookingConfirmView_Previews: PreviewProvider{
-    //static var previews: some View{
-        //NavigationView{
-            //BookingConfirmView()
-        //}
-    //}
-//}

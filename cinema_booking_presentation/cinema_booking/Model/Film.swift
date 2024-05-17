@@ -1,10 +1,3 @@
-//
-//  Film.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/13/24.
-//
-
 import Foundation
 
 struct Film: Identifiable, Decodable {

@@ -1,10 +1,3 @@
-//
-//  CustomTabBar.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/8/24.
-//
-
 import SwiftUI
 
 struct CustomTabBar: View {
@@ -27,11 +20,10 @@ struct CustomTabBar: View {
                 .padding(.top, 20)
                 .frame(maxWidth: .infinity)
             }
-             // Add padding to give some height to the tab bar
-            .background(Color.indigo) // Use `Color.indigo` if `.systemIndigo` fails
+             
+            .background(Color.indigo)
             .foregroundColor(.white)
             .padding(.bottom, 20)
-            //.frame(height: 100)
         }
         .edgesIgnoringSafeArea(.all)
     }

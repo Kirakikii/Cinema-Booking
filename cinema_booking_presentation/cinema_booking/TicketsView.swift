@@ -1,13 +1,8 @@
-//
-//  BookingsView.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/8/24.
-//
+
 
 import SwiftUI
 
-
+//Define the model for Ticket
 struct Ticket: Identifiable{
     let id: String
     let filmName: String
@@ -27,7 +22,6 @@ struct TicketsView: View {
     @AppStorage("movieDetail") var movieDetailData: String = ""
     
     @State private var tickets = [Ticket]()
-    // Demo wireframe
     
     
     
@@ -45,7 +39,7 @@ struct TicketsView: View {
                             .padding()
                         
                         VStack(alignment: .leading) {
-                            Text("\(ticket.filmName)")
+                
                             Text("\(ticket.cinema)")
                             Text("\(ticket.date)")
                             Text("\(ticket.time)")
@@ -61,7 +55,7 @@ struct TicketsView: View {
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.top)
         .task{
-            tickets = await userVM .getAllTickets()
+            tickets = await userVM .getAllTickets() // Fetch tickets from database
         }
     }
     
@@ -78,7 +72,7 @@ struct TicketsView: View {
     var TicketsNavBarView: some View {
         VStack {
             HStack{
-                //backButton
+            
                 Spacer()
                 Text("Tickets")
                     .font(.title)
@@ -86,9 +80,9 @@ struct TicketsView: View {
                     .foregroundColor(.white)
                     .padding(.top, 40)
                 Spacer()
-                //backButton.opacity(0) //keep the title centred
+                
             }
-            //.padding()
+            
             .padding(.vertical, 25)
             .padding(.bottom, 0)
             .background(Color.indigo)
@@ -98,12 +92,12 @@ struct TicketsView: View {
 
 struct TicketsView_Previews: PreviewProvider {
     static var previews: some View {
-        // Create an instance of ViewRouter for preview
+        
         let viewRouter = ViewRouter()
         
-        // Provide the ViewRouter instance to HomeView
+        
         TicketsView(viewRouter: viewRouter)
-            .environmentObject(viewRouter)  // if needed elsewhere in the view hierarchy
+            .environmentObject(viewRouter)
     }
 }
 

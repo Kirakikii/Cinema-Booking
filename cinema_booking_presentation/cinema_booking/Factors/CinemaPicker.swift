@@ -1,10 +1,3 @@
-//
-//  CinemaPicker.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/9/24.
-//
-
 import SwiftUI
 
 struct CinemaPicker: View {
@@ -46,7 +39,7 @@ struct CinemaPicker: View {
 
                    
             }
-            .background(Color.black.opacity(0.4)) // Background for the entire HStack
+            .background(Color.black.opacity(0.4)) 
             .foregroundColor(.white)
             .padding(.horizontal, 0)
             

@@ -1,10 +1,3 @@
-//
-//  UserViewModel.swift
-//  cinema_booking
-//
-//  Created by Jianuo Liu on 16/5/2024.
-//
-
 import Foundation
 import FirebaseCore
 import FirebaseFirestore

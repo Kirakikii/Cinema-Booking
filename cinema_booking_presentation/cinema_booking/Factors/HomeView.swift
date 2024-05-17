@@ -1,9 +1,4 @@
-//
-//  HomeView.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/8/24.
-//
+
 
 import SwiftUI
 
@@ -15,7 +10,7 @@ struct HomeView: View {
     @State private var selectedDate = Date()
     
     
-    // Demo wireframe
+    // Decode film details from Film.json
     let films: [Film] = Bundle.main.decode([Film].self, from: "FilmDetails.json")
     
     var body: some View {
@@ -40,6 +35,7 @@ struct HomeView: View {
             .edgesIgnoringSafeArea(.top)
         }
     }
+    
     
     private func movieCard(for film: Film) -> some View {
         NavigationLink(destination: MovieDetailView(film: film,viewRouter: viewRouter)) {
@@ -72,7 +68,7 @@ struct HomeView: View {
     var CustomNavBarView: some View {
         VStack {
             HStack{
-                //backButton
+                
                 Spacer()
                 Text("Home")
                     .font(.title)
@@ -80,9 +76,9 @@ struct HomeView: View {
                     .foregroundColor(.white)
                     .padding(.top, 40)
                 Spacer()
-                //backButton.opacity(0) //keep the title centred
+                
             }
-            //.padding()
+            
             .padding(.vertical, 25)
             .padding(.bottom, 0)
             .background(Color.indigo)
@@ -97,12 +93,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        // Create an instance of ViewRouter for preview
         let viewRouter = ViewRouter()
-        
-        // Provide the ViewRouter instance to HomeView
         HomeView(viewRouter: viewRouter)
-            .environmentObject(viewRouter)  // if needed elsewhere in the view hierarchy
+            .environmentObject(viewRouter)  
     }
 }
 
