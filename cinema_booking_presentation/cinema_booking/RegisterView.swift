@@ -53,9 +53,9 @@ struct RegisterView: View {
                         showNet = false
                         self.showAlert = true
                         if result {
-                            alertText = "register success"
+                            alertText = "Registration successful"
                         } else {
-                            alertText = "register erro"
+                            alertText = "Registration error"
                         }
                     
                     }
@@ -72,7 +72,7 @@ struct RegisterView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text(alertText), dismissButton: Alert.Button.default(Text("OK"), action: {
                         //give feedback to user to tell them register success
-                        if alertText ==  "register success"{
+                        if alertText ==  "Registration successful"{
                             dismiss()
                         }
                     }))
