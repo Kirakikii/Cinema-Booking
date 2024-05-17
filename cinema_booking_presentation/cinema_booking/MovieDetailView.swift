@@ -21,7 +21,7 @@ struct MovieDetailView: View {
     @State var selectedDate = Date()
     @State var selectedTime = ""
     
-    // This function generates the next 7 days including today
+    // This function generates the next 7 days including current day
     private var dateOptions: [(String, String, String)] {
         let calendar = Calendar.current
         return (0..<7).map { i in
@@ -32,11 +32,13 @@ struct MovieDetailView: View {
             return (String(day), weekday, month)
         }
     }
-    
     private let timeOptions = [
         "10:00", "12:35", "14:00", "15:55", "18:15", "21:30", "23:59"
     ]
     
+    
+    
+    // Retrieves the users exact time and minute, ensuring booking cant be made after sessions is expired
     private var availableTimeOptions: [String] {
         let currentTime = Calendar.current.dateComponents([.hour, .minute], from: Date())
         let currentHour = currentTime.hour ?? 0
