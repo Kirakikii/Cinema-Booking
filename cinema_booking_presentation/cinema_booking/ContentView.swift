@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+//control the visibility of tab bar
 class ViewRouter: ObservableObject {
     @Published var showTabBar: Bool = true
 }
@@ -12,12 +13,15 @@ struct ContentView: View {
     
     init(selectedTab: Tab = .movies){
         _selectedTab = State(initialValue: selectedTab)
+        //set a flag that whether we need to show the tab bar
         UITabBar.appearance().isHidden = true
     }
     
     var body: some View{
         
         VStack(spacing: 0.0){
+            
+            //genrate the interface 
             
             TabView(selection: $selectedTab){
                 HomeView(viewRouter: viewRouter)
@@ -32,7 +36,8 @@ struct ContentView: View {
         }
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.bottom)
-        .environmentObject(viewRouter)  // Providing the viewRouter throughout the app
+        // Providing the viewRouter throughout the app
+        .environmentObject(viewRouter)
     }
 }
     

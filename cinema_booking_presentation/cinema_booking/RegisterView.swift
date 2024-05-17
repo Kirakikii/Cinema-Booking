@@ -1,10 +1,3 @@
-//
-//  RegisterView.swift
-//  cinema_booking
-//
-//  Created by XIN TONG HOU on 16/5/2024.
-//
-
 import SwiftUI
 
 struct RegisterView: View {
@@ -18,6 +11,7 @@ struct RegisterView: View {
     var body: some View {
         NavigationView {
             VStack{
+                //insert logo image to the screen
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -25,7 +19,8 @@ struct RegisterView: View {
                     .clipped()
                     .cornerRadius(50)
                 Spacer()
-                //1user
+                
+                //create the textfield of username
                 HStack(alignment: .center, spacing: 17) {
                     Text("Username")
                         
@@ -35,7 +30,7 @@ struct RegisterView: View {
                 }
                 .padding(.leading,20)
                 
-                //2password
+                //create the textfield of password
                 HStack(alignment: .center, spacing: 20) {
                     Text("Password")
                     SecureField("Please input a password" , text:$pwd )
@@ -45,7 +40,7 @@ struct RegisterView: View {
                 }
                 .padding(.leading,20)
                 
-                //3
+                //test the input from user
                 Button {
                     if user.count == 0 || pwd.count == 0{
                         self.showAlert = true
@@ -76,6 +71,7 @@ struct RegisterView: View {
                 .padding(.top,30)
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text(alertText), dismissButton: Alert.Button.default(Text("OK"), action: {
+                        //give feedback to user to tell them register success
                         if alertText ==  "register success"{
                             dismiss()
                         }

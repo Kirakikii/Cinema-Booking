@@ -27,7 +27,7 @@ struct MovieDetailView: View {
         return (0..<7).map { i in
             let date = calendar.date(byAdding: .day, value: i, to: Date())!
             let day = calendar.component(.day, from: date)
-            let weekday = calendar.weekdaySymbols[calendar.component(.weekday, from: date) - 1]
+            let weekday = calendar.shortWeekdaySymbols[calendar.component(.weekday, from: date) - 1]
             let month = calendar.shortMonthSymbols[calendar.component(.month, from: date) - 1]
             return (String(day), weekday, month)
         }

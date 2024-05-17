@@ -1,14 +1,8 @@
-//
-//  cinema_bookingApp.swift
-//  cinema_booking
-//
-//  Created by 吴泓昕 on 5/8/24.
-//
-
 import SwiftUI
 import SwiftData
 import FirebaseCore
 
+//connect to the firebase from(https://console.firebase.google.com/project/cinema-booking-2dd16/overview?hl=zh-cn)
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -21,6 +15,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct cinema_bookingApp: App {
     
+    //connect to the firebase from(https://console.firebase.google.com/project/cinema-booking-2dd16/overview?hl=zh-cn)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     @StateObject var userVM = UserViewModel()

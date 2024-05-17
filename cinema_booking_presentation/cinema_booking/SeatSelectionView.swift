@@ -81,7 +81,7 @@ struct SeatSelectionView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                     Spacer()
-                    backButton.opacity(0) // 使标题保持居中
+                    backButton.opacity(0) // Keep the title centered
                 }
                 .padding()
                 .padding(.horizontal, 40)

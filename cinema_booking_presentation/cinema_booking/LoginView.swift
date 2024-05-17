@@ -5,15 +5,15 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var userVM: UserViewModel
-    @State var user  = "123"
-    @State var pwd  = "123"
+    @State var user  = ""
+    @State var pwd  = ""
     @State var showAlert : Bool = false
     @State var alertText = ""
     @State var showNet = false
     var body: some View {
         NavigationView {
             VStack{
-                //1user
+                //insert logo image to the screen
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -22,6 +22,7 @@ struct LoginView: View {
                     .cornerRadius(50)
                 
                 Spacer()
+                //create the textfield of username
                 HStack(alignment: .center, spacing: 10) {
                     Text("Username")
                         
@@ -32,7 +33,7 @@ struct LoginView: View {
                 }
                 .padding(.leading,20)
                 
-                //2password
+                //create the textfield of username
                 HStack(alignment: .center, spacing: 15) {
                     Text("Password")
                        
@@ -43,8 +44,9 @@ struct LoginView: View {
                 }
                 .padding(.leading,20)
                 
+            Spacer()
         
-                //3 login
+                //test the input from user
                 Button {
                     if user.count == 0 || pwd.count == 0{
                         self.showAlert = true
@@ -72,13 +74,13 @@ struct LoginView: View {
                         .foregroundColor(Color.white)
                         .background(Color.indigo)
                 }
-                .padding(.top,30)
+                .padding(.top,0)
                 .cornerRadius(10)
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text(alertText))
                 }
              
-                //4register
+                //link to registerview
                 NavigationLink(destination: RegisterView()) {
                     Text("Register")
                         .frame(width: 200, height: 40, alignment: .center)
@@ -92,6 +94,7 @@ struct LoginView: View {
                 
             }
             .padding(.top,100)
+            //show the loading animation
             .navigationBarTitle("Login",displayMode: .inline)
             .withLoading(showAlert: $showNet, msg: .constant("Loading"))
         }
