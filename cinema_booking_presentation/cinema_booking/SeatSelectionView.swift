@@ -65,7 +65,7 @@ struct SeatSelectionView: View {
             }
         }
         .withLoading(showAlert: $showNet, msg: .constant("Loading"))
-        .navigationBarBackButtonHidden(true)  // 尝试在这里隐藏返回按钮
+        .navigationBarBackButtonHidden(true)
         .navigationBarTitle("", displayMode: .inline)
         
         
@@ -143,11 +143,7 @@ struct SeatSelectionView: View {
                     showingSummary = true  // Trigger the summary view
                 }
                 
-                //createNewBook = true
-                
-                //let newBook = BookingDetailModel(filmName: "", cinema: "", date: Date(), time: "", seat: seat.joined(separator: ", "))  // Assume you want to join all selected seats into one string
-                //context.insert(newBook)  // Assuming your context can handle the insert operation correctly
-                //dismiss()  // Dismiss the view correctly
+
             }
         }) {
             Text("Confirm")
@@ -182,7 +178,7 @@ struct SeatSelectionView: View {
                 VStack {
                     
                     VStack(spacing: 20) {
-                        
+                        // Generate booking details
                         Text("Date: \(Date(), formatter: itemFormatter)")
                         Text("Location: Cinema 1")
                         Text("Seat: \(seat.joined(separator: ", "))")
@@ -214,7 +210,7 @@ struct SeatSelectionView: View {
             }
         }
     }
-    
+    // Seat colour generation upon user input
     struct LegendColor: View {
         let color: Color
         let text: String
@@ -230,14 +226,7 @@ struct SeatSelectionView: View {
             }
         }
     }
-    
-    //struct SeatSelectionView_Previews: PreviewProvider {
-    //static var previews: some View {
-    //SeatSelectionView()
-    //}
-    //}
-    
-    
+
     
     private let itemFormatter: DateFormatter = {
         let formatter = DateFormatter()

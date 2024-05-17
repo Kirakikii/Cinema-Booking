@@ -65,7 +65,7 @@ struct MovieDetailView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 400, height: 250)
                 .padding(.top, 0)
-            
+            // User scroll view to show film details before booking
             ScrollView {
                 VStack(spacing: 5) {
                     Text(film.filmName)
@@ -99,7 +99,7 @@ struct MovieDetailView: View {
                         .foregroundColor(.pink)
                     }
                     Divider()
-                    
+                    // Scroll view to show current date and time
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 18) {
                             ForEach(0..<dateOptions.count, id: \.self) { index in
@@ -153,7 +153,6 @@ struct MovieDetailView: View {
                             .cornerRadius(10)
                     }
                     
-                    //Spacer()
                 }
                 .padding()
             }
@@ -163,11 +162,12 @@ struct MovieDetailView: View {
                 viewRouter.showTabBar = true
             }) {
                 Image(systemName: "chevron.left")
-                    .foregroundColor(.pink) // Sets the color of the back button to pink
+                // Sets the color of the back button to pink
+                    .foregroundColor(.pink)
             })
             .onAppear {
                 viewRouter.showTabBar = false
-            }
+            } //Link to seat selection view page
             .navigationDestination(isPresented: $showSeatSelectionView) {
                 SeatSelectionView(viewRouter: viewRouter, film: film, selectedDate: selectedDate, selectedTime: selectedTime)
             }
